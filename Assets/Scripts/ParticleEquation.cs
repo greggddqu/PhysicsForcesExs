@@ -21,7 +21,7 @@ public class ParticleEquation : MonoBehaviour
         transform.position = new Vector3(0, 0, 0);
         initialPos = transform.position;
         initialVel = new Vector3(0, 1, 1) * 10.0f; 
-        acceleration = -0.5f * 9.8f * Vector3.up;
+        acceleration = - 9.8f * Vector3.up;
         timeNow = 0;
     }
 
@@ -30,7 +30,7 @@ public class ParticleEquation : MonoBehaviour
     {        
         //calculate the trajectory of a projectile with default mass 1
         posNow.x = initialPos.x + initialVel.x * timeNow;
-        posNow.y = initialPos.y + (initialVel.y + acceleration.y * timeNow) * timeNow;
+        posNow.y = initialPos.y + (initialVel.y + 0.5f * acceleration.y * timeNow) * timeNow;
         posNow.z = initialPos.z + initialVel.z * timeNow;
         //update the transform position with the calculated position
         transform.position = posNow; 

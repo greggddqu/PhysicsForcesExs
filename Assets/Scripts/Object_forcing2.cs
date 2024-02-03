@@ -15,7 +15,7 @@ public class Object_forcing2 : MonoBehaviour
     {
         transform.position = new Vector3(10, 0, 0);
         rb = GetComponent<Rigidbody>();
-        rb.velocity = initialVeclocity = new Vector3(0, 3, 0);
+        rb.velocity = initialVeclocity = new Vector3(0, 2.5f, 0);
 
         ofer = FindObjectOfType<GravForceManager>();
     }
